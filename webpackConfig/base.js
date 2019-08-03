@@ -15,7 +15,7 @@ const webpackConfig = {
     entry : './src/index.js',
     output:{
         filename:'bundle.[hash:5].js',
-        path: path.resolve(__dirname, '../docs'),
+        path: path.resolve(__dirname, '../doc'),
         publicPath:''
     },
 
