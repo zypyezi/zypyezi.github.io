@@ -5,6 +5,7 @@ import React, {
 } from 'react'
 import ReactDOM from 'react-dom'
 import Routers from 'SRC/route/index'
+import './styles/base.scss'
 // import store from 'SRC/store/index'
 
 

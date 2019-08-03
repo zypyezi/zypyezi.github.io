@@ -1,13 +1,12 @@
 
 import React, { Component } from 'react'
-import { Route, HashRouter, Switch, Redirect } from 'react-router-dom'
-
-import App from '../component/App'
+import { Route, HashRouter, Switch, Redirect, IndexRoute } from 'react-router-dom'
+import Home from '../component/Home'
 
 const Routes = () => {
     return <HashRouter>
         <Switch>
-                <Route exact path='/' component={App}/>
+            <Route path='/' component={Home} ></Route>
         </Switch>
     </HashRouter>
 }
