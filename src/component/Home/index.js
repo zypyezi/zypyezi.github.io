@@ -4,10 +4,53 @@ import React, { Component } from 'react'
   class App extends Component{
        constructor (props) {
             super(props)
+
+            this.state = {
+                calendar: []
+            }
        }
 
+       componentWillMount () {
+           this.getTime()
+       }
+
+
+       componentWillUnmount () {
+           this.timer && clearInterval(this.timer)
+       }
+
+
+
+       getTime = () => {
+           this.timmer = setInterval(() => {
+               let t = new Date()
+               let m = t.getMonth() + 1
+               let d = t.getDate()
+               let h = t.getHours()
+               let min = t.getMinutes()
+               let {calendar} = this.state
+               calendar.push({
+                    month: m > 10 ? m : '0' + m,
+                    day: d > 10 ? d : '0' + d,
+                    hour: h > 10 ? h : '0' + h,
+                    minute: min > 10 ? min : '0' + min
+                })
+                if(calendar.length > 2) {
+                    calendar.splice(0, 1)
+                }
+                this.setState({
+                    calendar : calendar
+                })
+           }, 1000)
+       }
+
+
+
+
+
+
        jump = () => {
-           location.href = 'http://yezizhang.com/docs/vue/index.html'
+        //    location.href = 'http://yezizhang.com/docs/vue/index.html'
        }
 
        renderTitle = () => {
@@ -18,12 +61,55 @@ import React, { Component } from 'react'
        }
 
 
+       renderCalendar = () => {
+            let {calendar} = this.state
+            let prev = calendar[0] || {}
+            let after = calendar[1] || {}
+            if(!prev){
+                return null
+            }
+           return <div className="mt-30">
+                <div className="calendar">
+                    <span  key={prev.month}>{prev.month}</span>
+                    {
+                        after.month != prev.month && <span key={after.month}>{after.month}</span>
+                    }
+                </div>
+                月
+                <div className="calendar">
+                    <span  key={prev.day}>{prev.day}</span>
+                    {
+                        after.day != prev.day && <span key={after.day}>{after.day}</span>
+                    }
+                </div>
+                日
+                <div className="calendar">
+                    <span  key={prev.hour}>{prev.hour}</span>
+                    {
+                        after.hour != prev.hour && <span key={after.hour}>{after.hour}</span>
+                    }
+                </div>
+                :
+                <div className="calendar">
+                    <span  key={prev.minute}>{prev.minute}</span>
+                    {
+                        after.minute != prev.minute && <span key={after.minute}>{after.minute}</span>
+                    }
+                </div>
+            </div>
+       }
+
+
        renderContent = () => {
            return <div className="pos-r ta-l oh mt-60">
                <div className="title1">Works</div>
                <div className="ml-20">
                 <div className="box">
-                    Easy-use-ui
+                    <span data-hover="Easy-use-ui">Easy-use-ui</span>
+                    <span>my own ui library</span>
+                </div>
+                <div className="box">
+                    <span>Canvas</span>
                 </div>
                </div>
            </div>
@@ -33,7 +119,7 @@ import React, { Component } from 'react'
            return ( 
               <div onClick={this.jump} className="ta-c">
                   {this.renderTitle()}
-                 
+                 {this.renderCalendar()}
                 {this.renderContent()}
               </div>
            )
