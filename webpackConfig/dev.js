@@ -16,7 +16,7 @@ const webpackConfig = {
             },
             {
                 test: /\.scss$/,
-                use: ["style-loader", 'css-loader','sass-loader']
+                use: ["style-loader", 'css-loader?modules&localIdentName=[local]-[hash:base64:5]','sass-loader']
             }
         ]
     },

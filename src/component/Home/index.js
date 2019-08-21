@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Article from './Article/index';
 
 
   class App extends Component{
@@ -44,14 +45,6 @@ import React, { Component } from 'react'
            }, 1000)
        }
 
-
-
-
-
-
-       jump = () => {
-        //    location.href = 'http://yezizhang.com/docs/vue/index.html'
-       }
 
        renderTitle = () => {
             return <div className="transition-down">
@@ -100,6 +93,17 @@ import React, { Component } from 'react'
        }
 
 
+       renderArticles = () => {
+            return <div className="pos-r ta-l oh mt-60">
+                <div className="title1">Articles</div>
+                <div className="ml-20">
+                    <Article></Article>
+                </div>
+            </div>
+        }
+
+
+        // 暂定 未开放
        renderContent = () => {
            return <div className="pos-r ta-l oh mt-60">
                <div className="title1">Works</div>
@@ -117,10 +121,10 @@ import React, { Component } from 'react'
 
        render () {
            return ( 
-              <div onClick={this.jump} className="ta-c">
+              <div  className="ta-c">
                   {this.renderTitle()}
-                 {this.renderCalendar()}
-                {this.renderContent()}
+                  {this.renderCalendar()}
+                  {this.renderArticles()}
               </div>
            )
         }

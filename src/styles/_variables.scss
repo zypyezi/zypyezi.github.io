@@ -1,0 +1,31 @@
+
+@mixin baseFontSize($step: 2) {
+    @for $i from 4 through 10{
+        .fz-#{$i * $step} {
+            font-size: #{$i * $step}px
+        }
+    }
+}
+
+
+@mixin baseMP ($step: 2) {
+    @for $i from 2 through 15{
+        .mt-#{$i * $step} {
+            margin-top: #{$i * $step}px
+        }
+        .pt-#{$i * $step} {
+            padding-top: #{$i * $step}px
+        }
+
+        .ml-#{$i * $step} {
+            margin-left: #{$i * $step}px
+        }
+
+        .pl-#{$i * $step} {
+            padding-left: #{$i * $step}px
+        }
+    }
+}
+
+
+
