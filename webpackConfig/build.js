@@ -42,7 +42,7 @@ const webpackConfig = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader
-                    },'css-loader', 'sass-loader'
+                    },'css-loader?modules&localIdentName=[local]-[hash:base64:5]', 'sass-loader'
                 ]
             },
         ]

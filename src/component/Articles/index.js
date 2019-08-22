@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import {ArticlesList} from '../../constant'
 import { withRouter } from 'react-router'
 import styles from './index.scss'
+import PageHead from '../PageHead';
+import TimeLine from '../TimeLine';
 
   class Articles extends Component{
        constructor (props) {
@@ -45,7 +47,8 @@ import styles from './index.scss'
        render () {
            return ( 
               <div>
-                  {this.renderNavs()}
+                  <PageHead></PageHead>
+                  <TimeLine></TimeLine>
               </div>
            )
         }

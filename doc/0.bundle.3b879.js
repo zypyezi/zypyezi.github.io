@@ -10,23 +10,23 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _getPrototypeOf = __webpack_require__(33);
+var _getPrototypeOf = __webpack_require__(19);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(39);
+var _classCallCheck2 = __webpack_require__(22);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(40);
+var _createClass2 = __webpack_require__(23);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(41);
+var _possibleConstructorReturn2 = __webpack_require__(24);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(51);
+var _inherits2 = __webpack_require__(25);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -34,7 +34,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constant = __webpack_require__(66);
+var _constant = __webpack_require__(52);
 
 var _index = __webpack_require__(122);
 
@@ -95,6 +95,7 @@ exports.default = (0, _reactRouter.withRouter)(Article);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+module.exports = {"article":"article-2uEsH","article-item":"article-item-3mnta","date":"date-3cWqP","week":"week-1RWdB","left":"left-vfQoW","right":"right-3ubmp","weathericon":"weathericon-WWmes","maintitle":"maintitle-y4dPl","iconlingxing":"iconlingxing-3plTq"};
 
 /***/ }),
 
@@ -108,23 +109,23 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _getPrototypeOf = __webpack_require__(33);
+var _getPrototypeOf = __webpack_require__(19);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(39);
+var _classCallCheck2 = __webpack_require__(22);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(40);
+var _createClass2 = __webpack_require__(23);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(41);
+var _possibleConstructorReturn2 = __webpack_require__(24);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(51);
+var _inherits2 = __webpack_require__(25);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -132,13 +133,21 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constant = __webpack_require__(66);
+var _constant = __webpack_require__(52);
 
 var _reactRouter = __webpack_require__(67);
 
 var _index = __webpack_require__(124);
 
 var _index2 = _interopRequireDefault(_index);
+
+var _PageHead = __webpack_require__(125);
+
+var _PageHead2 = _interopRequireDefault(_PageHead);
+
+var _TimeLine = __webpack_require__(127);
+
+var _TimeLine2 = _interopRequireDefault(_TimeLine);
 
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
@@ -192,7 +201,7 @@ var Articles = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', null, this.renderNavs());
+            return _react2.default.createElement('div', null, _react2.default.createElement(_PageHead2.default, null), _react2.default.createElement(_TimeLine2.default, null));
         }
     }]);
     return Articles;
@@ -206,17 +215,208 @@ exports.default = (0, _reactRouter.withRouter)(Articles);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+module.exports = {"nav":"nav-2XAWt","nav-item":"nav-item-3OmRK","active":"active-dwfsn"};
 
 /***/ }),
 
 /***/ 125:
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _getPrototypeOf = __webpack_require__(19);
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = __webpack_require__(22);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(23);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(24);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(25);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(126);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+var menus = [{
+    name: '首页',
+    icon: 'iconxiazai44',
+    id: 'home',
+    path: '/'
+}, {
+    name: '标签',
+    icon: 'iconbiaoqian',
+    id: 'tag',
+    path: '/'
+}, {
+    name: '归档',
+    icon: 'iconguidang',
+    id: 'page',
+    path: '/'
+}];
+
+var PageHead = function (_Component) {
+    (0, _inherits3.default)(PageHead, _Component);
+
+    function PageHead(props) {
+        (0, _classCallCheck3.default)(this, PageHead);
+        return (0, _possibleConstructorReturn3.default)(this, (PageHead.__proto__ || (0, _getPrototypeOf2.default)(PageHead)).call(this, props));
+    }
+
+    (0, _createClass3.default)(PageHead, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { className: _index2.default.head }, _react2.default.createElement('div', { className: _index2.default.author }, _react2.default.createElement('div', { className: _index2.default.line }), _react2.default.createElement('div', null, 'Yezi\'s Articles'), _react2.default.createElement('div', { className: _index2.default.line })), _react2.default.createElement('ul', { className: _index2.default.menu }, menus.map(function (item) {
+                return _react2.default.createElement('li', { className: _index2.default.menuitem }, _react2.default.createElement('svg', { className: 'icon ' + _index2.default.menuicon, 'aria-hidden': 'true' }, _react2.default.createElement('use', { xlinkHref: '#' + item.icon })), _react2.default.createElement('span', null, item.name));
+            })));
+        }
+    }]);
+    return PageHead;
+}(_react.Component);
+
+exports.default = PageHead;
 
 /***/ }),
 
-/***/ 66:
+/***/ 126:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"head":"head-3of90","author":"author-3Do7G","line":"line-1yT1a","menu":"menu-CvmU7","menuitem":"menuitem-2GkSk","menuicon":"menuicon-10bHf"};
+
+/***/ }),
+
+/***/ 127:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _getPrototypeOf = __webpack_require__(19);
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = __webpack_require__(22);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(23);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(24);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(25);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(128);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _constant = __webpack_require__(52);
+
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+var TimeLine = function (_Component) {
+    (0, _inherits3.default)(TimeLine, _Component);
+
+    function TimeLine(props) {
+        (0, _classCallCheck3.default)(this, TimeLine);
+
+        var _this = (0, _possibleConstructorReturn3.default)(this, (TimeLine.__proto__ || (0, _getPrototypeOf2.default)(TimeLine)).call(this, props));
+
+        _this.getMonth = function (t) {
+            var time = new Date(+t);
+            var y = time.getFullYear();
+            var m = time.getMonth() + 1;
+            return y + ' 年 ' + m + ' 月';
+        };
+
+        _this.renderArticles = function (article) {
+            return article.map(function (item) {
+                return _react2.default.createElement('div', { key: item.id, className: _index2.default['article-item'] }, _react2.default.createElement('span', { className: _index2.default.dot + ' ' + _index2.default['small-dot'] }), _react2.default.createElement('span', { className: _index2.default['article-item-title'] }, item.title, _react2.default.createElement('svg', { className: 'icon ' + _index2.default.happyicon, 'aria-hidden': 'true' }, _react2.default.createElement('use', { xlinkHref: '#iconkaixinguo1' }))));
+            });
+        };
+
+        return _this;
+    }
+
+    (0, _createClass3.default)(TimeLine, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var totalMount = 0;
+            _constant.ArticlesList.map(function (item) {
+                totalMount += item.articlesList.length;
+            });
+
+            return _react2.default.createElement('div', { className: _index2.default.timeline }, _react2.default.createElement('span', { className: _index2.default.dot }), _react2.default.createElement('span', { className: _index2.default.total }, '\u5DF2\u7ECF\u52A0\u4E86', totalMount, '\u6B21\u6CB9\u4E86\uFF0C \u4E0D\u80FD\u653E\u5F03\u54C7\uFF5E'), _react2.default.createElement('svg', { className: 'icon ' + _index2.default.happyicon, 'aria-hidden': 'true' }, _react2.default.createElement('use', { xlinkHref: '#iconkaixinguo' })), _constant.ArticlesList.map(function (article, index) {
+                var month = _this2.getMonth(article.monthKey);
+                return _react2.default.createElement(_react.Fragment, null, _react2.default.createElement('div', { key: index }, _react2.default.createElement('span', { className: _index2.default.dot + ' ' + _index2.default['middle-dot'] }), _react2.default.createElement('span', { className: _index2.default.timeTitle }, month)), _this2.renderArticles(article.articlesList));
+            }));
+        }
+    }]);
+    return TimeLine;
+}(_react.Component);
+
+exports.default = TimeLine;
+
+/***/ }),
+
+/***/ 128:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"timeline":"timeline-2ZzOV","dot":"dot-8znp4","middle-dot":"middle-dot-IbtOo","small-dot":"small-dot-33_gm","timeTitle":"timeTitle-1vl8K","total":"total-29VVS","article-item":"article-item-2ufz-","article-item-title":"article-item-title-3nE-f","happyicon":"happyicon-14uxy"};
+
+/***/ }),
+
+/***/ 129:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"fz-8":"fz-8-3_LR9","fz-10":"fz-10-3AKEg","fz-12":"fz-12-3Fk0n","fz-14":"fz-14-27b-j","fz-16":"fz-16-6leMM","fz-18":"fz-18-3VRs3","fz-20":"fz-20-2J1Co","slidein":"slidein-3MFD5","showpage":"showpage-18cc3"};
+
+/***/ }),
+
+/***/ 52:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -249,6 +449,7 @@ var ArticlesList = exports.ArticlesList = [{
     }]
 }, {
     monthTime: '二零一九年 八月',
+    monthKey: '1564617600000',
     articlesList: [{
         id: 'prototype',
         week: '周一',
@@ -276,7 +477,7 @@ var WEATHER_ICON = exports.WEATHER_ICON = {
 "use strict";
 
 
-var _reactRedux = __webpack_require__(126);
+var _reactRedux = __webpack_require__(130);
 
 var _react = __webpack_require__(1);
 
@@ -290,7 +491,7 @@ var _index = __webpack_require__(79);
 
 var _index2 = _interopRequireDefault(_index);
 
-__webpack_require__(125);
+__webpack_require__(129);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -322,7 +523,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(127);
+var _reactRouterDom = __webpack_require__(131);
 
 var _Home = __webpack_require__(81);
 
@@ -354,23 +555,23 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _getPrototypeOf = __webpack_require__(33);
+var _getPrototypeOf = __webpack_require__(19);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = __webpack_require__(39);
+var _classCallCheck2 = __webpack_require__(22);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(40);
+var _createClass2 = __webpack_require__(23);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(41);
+var _possibleConstructorReturn2 = __webpack_require__(24);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(51);
+var _inherits2 = __webpack_require__(25);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
