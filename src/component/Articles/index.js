@@ -4,6 +4,9 @@ import { withRouter } from 'react-router'
 import styles from './index.scss'
 import PageHead from '../PageHead';
 import TimeLine from '../TimeLine';
+import Today from '../Today';
+import EverydaySentence from '../EverydaySentence';
+import Documents from '../Documents';
 
   class Articles extends Component{
        constructor (props) {
@@ -11,7 +14,8 @@ import TimeLine from '../TimeLine';
 
             this.state = {
                 currentArticleList: [],
-                selectedArticle: null
+                selectedArticle: null,
+                show: false
             }
        }
 
@@ -26,6 +30,10 @@ import TimeLine from '../TimeLine';
 
         componentWillReceiveProps () {
             console.log(this.props.match.params)
+        }
+
+        show = (value) =>{
+            this.setState({show : value })
         }
 
        // 左侧菜单栏
@@ -45,10 +53,19 @@ import TimeLine from '../TimeLine';
        }
 
        render () {
+           let {selectedArticle} = this.state
            return ( 
               <div>
                   <PageHead></PageHead>
-                  <TimeLine></TimeLine>
+                  {
+                      selectedArticle
+                      ?  <Documents id={selectedArticle}></Documents>
+                      :  <TimeLine></TimeLine>
+                  }
+                  {/* <Today click={this.show}></Today>
+                  {
+                      this.state.show &&  <EverydaySentence close={() => this.show(false)}></EverydaySentence>
+                  } */}
               </div>
            )
         }
