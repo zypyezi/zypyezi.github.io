@@ -1,13 +1,27 @@
 import React, { Component } from 'react'
 import Article from './Article/index';
 
+const getCurTime = function(){
+    let t = new Date()
+    let m = t.getMonth() + 1
+    let d = t.getDate()
+    let h = t.getHours()
+    let min = t.getMinutes()
+    return {
+        month: m > 10 ? m : '0' + m,
+        day: d > 10 ? d : '0' + d,
+        hour: h > 10 ? h : '0' + h,
+        minute: min > 10 ? min : '0' + min
+    }
+}
+const calendar = [getCurTime()]
 
   class App extends Component{
        constructor (props) {
             super(props)
 
             this.state = {
-                calendar: []
+                calendar: calendar
             }
        }
 
@@ -23,26 +37,29 @@ import Article from './Article/index';
 
 
        getTime = () => {
-           this.timmer = setInterval(() => {
-               let t = new Date()
-               let m = t.getMonth() + 1
-               let d = t.getDate()
-               let h = t.getHours()
-               let min = t.getMinutes()
-               let {calendar} = this.state
-               calendar.push({
-                    month: m > 10 ? m : '0' + m,
-                    day: d > 10 ? d : '0' + d,
-                    hour: h > 10 ? h : '0' + h,
-                    minute: min > 10 ? min : '0' + min
-                })
-                if(calendar.length > 2) {
-                    calendar.splice(0, 1)
-                }
-                this.setState({
-                    calendar : calendar
-                })
-           }, 1000)
+
+           let getCurTime = () => {
+            let t = new Date()
+            let m = t.getMonth() + 1
+            let d = t.getDate()
+            let h = t.getHours()
+            let min = t.getMinutes()
+            let {calendar} = this.state
+            calendar.push({
+                 month: m > 10 ? m : '0' + m,
+                 day: d > 10 ? d : '0' + d,
+                 hour: h > 10 ? h : '0' + h,
+                 minute: min > 10 ? min : '0' + min
+             })
+             if(calendar.length > 2) {
+                 calendar.splice(0, 1)
+             }
+             this.setState({
+                 calendar : calendar
+             })
+           }
+           this.timmer = setInterval(getCurTime, 1000)
+        
        }
 
 
@@ -56,12 +73,12 @@ import Article from './Article/index';
 
        renderCalendar = () => {
             let {calendar} = this.state
-            let prev = calendar[0] || {}
-            let after = calendar[1] || {}
-            if(!prev){
+            let prev = calendar[0] 
+            let after = calendar[1]
+            if(!prev || !after){
                 return null
             }
-           return <div className="mt-30">
+           return <div className="mt-30 calendar-box">
                 <div className="calendar">
                     <span  key={prev.month}>{prev.month}</span>
                     {

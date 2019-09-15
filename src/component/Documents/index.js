@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import styles from './index.scss'
+
 import {renderHead, renderP, renderSubLine, renderCode} from './Components'
 
   class Documents extends Component{
@@ -10,6 +12,14 @@ import {renderHead, renderP, renderSubLine, renderCode} from './Components'
        renderContent = (n) => {
             if(/^code:/.test(n)){
                 return renderCode(n.replace(/^code:/g, ''))
+            }else if(/^title:/.test(n)){
+                return renderTitle(n.replace(/^title:/g, ''))
+            }else if(/^strong:/.test(n)){
+                return renderStrong(n.replace(/^strong:/g, ''))
+            }else if(/^img:/.test(n)){
+                return renderImg(n.replace(/^img:/g, ''))
+            }else if(/^head:/.test(n)){
+                return renderHead(n.replace(/^head:/g, ''))
             }else{
                 return renderP(n)
             }
@@ -17,15 +27,30 @@ import {renderHead, renderP, renderSubLine, renderCode} from './Components'
        }
 
        render () {
-           let {id} = this.props
-           let note =  require(`./Notes/${id}`).default
+           let {article} = this.props
+           let note =  require(`./Notes${article.path}`).default
            return ( 
-              <div>
-                  {
-                      note.content.map(n => {
-                          return this.renderContent(n)
-                      })
-                  }
+              <div className="h-100">
+                
+                <div className={styles.floatcontent}>
+
+                </div>
+
+                <div className={styles.fixedcontent}>
+                    <div className={styles.title}>
+                      {article.title}
+                    </div>
+                    <div className={styles.content}>
+                            {
+                                note.content.map(n => {
+                                    return this.renderContent(n)
+                                })
+                            }
+                        </div>
+                </div>
+                    
+                 
+                  
               </div>
            )
         }

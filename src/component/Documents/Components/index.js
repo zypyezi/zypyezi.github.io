@@ -3,6 +3,10 @@ import styles from './index.scss'
 import React, { Component } from 'react'
 
 
+export const renderTitle = (content) => {
+    return <h1>{content}</h1>
+}
+
 export const renderHead = (content) => {
     return <h1>{content}</h1>
 }

@@ -14,16 +14,17 @@ import Documents from '../Documents';
 
             this.state = {
                 currentArticleList: [],
-                selectedArticle: null,
+                selectedArticle: {},
                 show: false
             }
        }
 
        componentWillMount () {
             let {params : {month, id} } = this.props.match
+            let  currentArticleList = ArticlesList[month].articlesList
             this.setState({
-                currentArticleList: ArticlesList[month].articlesList,
-                selectedArticle: id
+                currentArticleList: currentArticleList,
+                selectedArticle: currentArticleList.find(it => it.id == id)
             })
         }
 
@@ -44,7 +45,7 @@ import Documents from '../Documents';
                     {
                         currentArticleList.map(item => {
                             return (
-                                <div className={`${item.id == selectedArticle ? styles.active : '' } ${styles['nav-item']}`}>{item.title}</div>
+                                <div className={`${item.id == selectedArticle.id ? styles.active : '' } ${styles['nav-item']}`}>{item.title}</div>
                             )
                         })
                     }
@@ -55,11 +56,11 @@ import Documents from '../Documents';
        render () {
            let {selectedArticle} = this.state
            return ( 
-              <div>
+              <div className="h-100 oh">
                   <PageHead></PageHead>
                   {
-                      selectedArticle
-                      ?  <Documents id={selectedArticle}></Documents>
+                      selectedArticle.id
+                      ?  <Documents article={selectedArticle}></Documents>
                       :  <TimeLine></TimeLine>
                   }
                   {/* <Today click={this.show}></Today>
