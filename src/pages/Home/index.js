@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Article from './Article/index';
+import {summary} from '../../constant'
 
 const getCurTime = function(){
     let t = new Date()
@@ -114,7 +114,20 @@ const calendar = [getCurTime()]
             return <div className="pos-r ta-l oh mt-60">
                 <div className="title1">Articles</div>
                 <div className="ml-20">
-                    <Article></Article>
+                    {
+                        summary.map(item => {
+                            return (
+                                <div className="box">
+                                    <span data-hover={item.title}>{item.title}</span>
+                                    <span>{item.subtitle}</span>
+                                </div>
+                            )
+                        })
+                    }
+                    
+                    <div className="box">
+                        <span>Canvas</span>
+                    </div>
                 </div>
             </div>
         }
@@ -125,13 +138,7 @@ const calendar = [getCurTime()]
            return <div className="pos-r ta-l oh mt-60">
                <div className="title1">Works</div>
                <div className="ml-20">
-                <div className="box">
-                    <span data-hover="Easy-use-ui">Easy-use-ui</span>
-                    <span>my own ui library</span>
-                </div>
-                <div className="box">
-                    <span>Canvas</span>
-                </div>
+                
                </div>
            </div>
        }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './index.scss'
 
-import {renderHead, renderP, renderSubLine, renderCode} from './Components'
+import {renderHead, renderP, renderSubLine, renderCode} from './Render'
 
   class Documents extends Component{
        constructor (props) {

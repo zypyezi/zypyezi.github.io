@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import styles from './index.scss'
-import {ArticlesList} from '../../constant'
+import {ArticlesList} from '../../backup/constant'
 
   class TimeLine extends Component{
        constructor (props) {

@@ -21,5 +21,5 @@ export const renderSubLine = (content) => {
 }
 
 export const renderCode = (content) => {
-    return <div>{content}</div>
+    return <pre><code class="language-css">{content}</code></pre>
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {ArticlesList} from '../../constant'
+import {ArticlesList} from '../constant'
 import { withRouter } from 'react-router'
 import styles from './index.scss'
 import PageHead from '../PageHead';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {ArticlesList, WEATHER_ICON} from '../../../constant'
+import {ArticlesList, WEATHER_ICON} from '../constant'
 import styles from './index.scss'
 import { withRouter } from 'react-router'
 

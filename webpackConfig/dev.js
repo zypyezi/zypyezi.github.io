@@ -25,7 +25,7 @@ const webpackConfig = {
     ],
     devServer: {
         disableHostCheck: true,
-        port: 8082,
+        port: 8084,
         host: '0.0.0.0',
         inline: true,
         historyApiFallback: true,
