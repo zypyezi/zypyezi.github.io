@@ -27,11 +27,12 @@ const menus = [
        }
 
        render () {
+           let {title} = this.props
            return ( 
               <div className={styles.head}>
                   <div className={styles.author}>
                         <div className={styles.line}></div>
-                        <div>Yezi's Articles</div>
+                        <div>{title}</div>
                         <div className={styles.line}></div>
                   </div>
 

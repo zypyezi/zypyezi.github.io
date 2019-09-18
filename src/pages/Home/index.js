@@ -35,6 +35,9 @@ const calendar = [getCurTime()]
        }
 
 
+       toPage = (data) => {
+            this.props.history.push(data.path)
+       }
 
        getTime = () => {
 
@@ -117,7 +120,7 @@ const calendar = [getCurTime()]
                     {
                         summary.map(item => {
                             return (
-                                <div className="box">
+                                <div className="box" key={item.id} onClick={this.toPage.bind(this, item)}>
                                     <span data-hover={item.title}>{item.title}</span>
                                     <span>{item.subtitle}</span>
                                 </div>
