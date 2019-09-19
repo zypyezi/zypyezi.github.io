@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
-import Diff from './diff'
+import diff from './diff'
+import renderMethod from 'SRC/component/Render'
 
 
 export default {
-    diff: Diff
+    diff: <div>
+        {
+            diff.map(item => {
+                return renderMethod[item.type](item.content)
+            })
+        }
+    </div>
 }

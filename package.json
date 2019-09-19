@@ -10,9 +10,11 @@
   "author": "zyp",
   "license": "ISC",
   "dependencies": {
+    "prismjs": "^1.17.1",
     "react": "~16.6.0",
     "react-dom": "~16.6.0",
     "react-images": "~0.5.19",
+    "react-prism": "^4.3.2",
     "react-redux": "~5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

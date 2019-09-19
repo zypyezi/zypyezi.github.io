@@ -6,17 +6,13 @@ import content from './Content/index'
             super(props)
        }
 
-       renderContent = (Comp) => {
-           return <Comp></Comp>
-       }
-
        render () {
         let {match} = this.props
         let {params} = match
         let activeId = params.id
            return ( 
               <div>
-                  {this.renderContent(content[activeId])}
+                  {content[activeId]}
               </div>
            )
         }

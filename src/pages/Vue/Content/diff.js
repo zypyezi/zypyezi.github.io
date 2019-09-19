@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 
 
-  class Diff extends Component{
-       constructor (props) {
-            super(props)
-       }
+const diff = [
+    {
+        type: 'renderCSS',
+        content: 
+        ``
+    },
+    {
+        type: 'renderJS',
+        content: 
+        `
+        `
+    }
+]
 
-       render () {
-           return ( 
-              <div>
-                  diff
-              </div>
-           )
-        }
 
-}
-
-export default Diff
+export default diff
