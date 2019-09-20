@@ -10,7 +10,9 @@
   "author": "zyp",
   "license": "ISC",
   "dependencies": {
-    "prismjs": "^1.17.1",
+    "flowchart": "^1.2.0",
+    "jquery": "^3.4.1",
+    "jsplumb": "^2.11.2",
     "react": "~16.6.0",
     "react-dom": "~16.6.0",
     "react-images": "~0.5.19",

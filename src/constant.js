@@ -1,10 +1,27 @@
 // 文章分类
-
+import Demo from 'SRC/pages/Demo'
 import Vue from 'SRC/pages/Vue'
 
 import React from 'SRC/pages/Vue'
 
 export const summary = [
+    {
+        title: 'Demo',
+        id:'Demo',
+        component: Demo,
+        path: '/demo',
+        navData: [
+            {
+                name: 'Demo',
+                submenus: [
+                    {
+                        name: 'Demo1',
+                        id: 'Demo1'
+                    }
+                ]
+            }
+        ]
+    },
     {
         title:'Vue',
         id:'vue',

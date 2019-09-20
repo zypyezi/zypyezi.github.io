@@ -4,17 +4,28 @@ import React, { Component } from 'react'
 
 
 export default {
-    renderBlock: (content) => {
-        return <div className={styles.block}>content</div>
+    renderText: (content) => {
+        return <div className={styles.block}>{content}</div>
     },
     renderTitle: (content) => {
-        return <div className={styles.title}>content</div>
+        return <div className={styles.title}>{content}</div>
     },
     renderSubTitle: (content) => {
-        return <div className={styles.subtitle}>content</div>
+        return <div className={styles.subtitle}>{content}</div>
     },
     renderBold: (content) => {
-        return <div className={styles.bold}>content</div>
+        return <div className={styles.bold}>{content}</div>
+    },
+    renderUl: (content) => {
+        return (
+            <ul>
+                {
+                    content.map((item,index) => {
+                        return <li key={index}>{index +1 }. {item}</li>
+                    })
+                }
+            </ul>
+        )
     },
     renderCSS : (content) => {
         return (
@@ -27,7 +38,7 @@ export default {
     },
     renderJS : (content) => {
         return (
-            <pre><code class="language-javascript">{content}</code></pre>
+            <pre><code className="language-javascript">{content}</code></pre>
         )
     }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
 
-const diff = [
+const demo = [
+
     {
         type: 'renderCSS',
         content: 
@@ -16,4 +17,4 @@ const diff = [
 ]
 
 
-export default diff
+export default demo
