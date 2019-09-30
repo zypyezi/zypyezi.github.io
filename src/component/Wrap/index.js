@@ -7,7 +7,7 @@ const Wrap = function ({Component, title, navData}) {
         <div className="h-100">
             {/* <PageHead title={title}></PageHead> */}
             <div className="h-100">
-                {/* <SideBar navData={navData}></SideBar> */}
+                <SideBar navData={navData}></SideBar>
                 <div className={styles.container}>
                     <Component></Component>
                 </div>

@@ -4,21 +4,21 @@ import React, { Component } from 'react'
 
 
 export default {
-    renderText: (content) => {
+    renderText: ({content}) => {
         return <div className={styles.block}>{content}</div>
     },
-    renderTitle: (content) => {
+    renderTitle: ({content}) => {
         return <div className={styles.title}>{content}</div>
     },
-    renderSubTitle: (content) => {
+    renderSubTitle: ({content}) => {
         return <div className={styles.subtitle}>{content}</div>
     },
-    renderBold: (content) => {
+    renderBold: ({content}) => {
         return <div className={styles.bold}>{content}</div>
     },
-    renderUl: (content) => {
+    renderUl: ({content = []}) => {
         return (
-            <ul>
+            <ul className={styles.ul}>
                 {
                     content.map((item,index) => {
                         return <li key={index}>{index +1 }. {item}</li>
@@ -27,18 +27,28 @@ export default {
             </ul>
         )
     },
-    renderCSS : (content) => {
+    renderCSS : ({content}) => {
         return (
-        <pre>
+        <pre >
         <code className="language-css">
             {content}
         </code>
         </pre>    
         )
     },
-    renderJS : (content) => {
+    renderJS : ({content}) => {
         return (
-            <pre><code className="language-javascript">{content}</code></pre>
+            <pre ><code className="language-javascript">{content}</code></pre>
+        )
+    },
+    renderPop: ({content, html}, props) => {
+        return (
+            <div className={styles.pop}> 
+                {html}
+                <svg onClick={(e) => props.showPop(e, true, content)} className={`icon ${styles.icon} cp`} aria-hidden="true">
+                    <use xlinkHref="#icontip" ></use>
+                </svg>
+            </div>
         )
     }
 }

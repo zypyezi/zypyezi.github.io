@@ -10,6 +10,14 @@ import {withRouter} from 'react-router-dom'
             }
        } 
 
+
+       componentWillMount(){
+            let {id} = this.props.match.params
+            this.setState({
+                activeMenu: id
+            })
+       }
+
        showMenu = (menu) => {
            let {history} = this.props
            let {location} = history
