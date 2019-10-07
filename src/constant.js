@@ -24,28 +24,7 @@ export const summary = [
             }
         ]
     },
-    {
-        title: 'JS',
-        id:'Js',
-        component: JS,
-        subtitle: 'js相关知识',
-        path: '/js',
-        navData: [
-            {
-                name: 'js基础知识',
-                submenus: [
-                    {
-                        name: '数据类型',
-                        id: 'dataType'
-                    },
-                    {
-                        name: '闭包',
-                        id: 'bibao'
-                    }
-                ]
-            }
-        ]
-    },
+    
     {
         title:'Vue',
         id:'vue',

@@ -4,11 +4,5 @@ import renderMethod from 'SRC/component/Render'
 
 
 export default {
-    demo: <div>
-        {
-            demo.map(item => {
-                return renderMethod[item.type](item.content)
-            })
-        }
-    </div>
+    demo:  renderMethod (demo) 
 }

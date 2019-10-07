@@ -5,9 +5,9 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import PopRight from 'SRC/component/PopRight'
-import {content} from 'SRC/document/Vue/index'
+import {content} from 'SRC/document/MobileQuestion/index'
 
-class Vue extends Component{
+class MobileQuestion extends Component{
     constructor (props) {
         super(props)
         this.state = {
@@ -64,4 +64,4 @@ class Vue extends Component{
 
 }
 
-export default withRouter(Vue)
+export default withRouter(MobileQuestion)

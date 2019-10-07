@@ -6,14 +6,16 @@ import Style from './index.scss'
             super(props)
        }
 
-       componentDidUpdate(){
-            Prism.highlightAll()
+   
+
+        handleClick(e){
+           e.stopPropagation
         }
 
        render () {
            let {popData, show} = this.props
            return ( 
-              <div className={Style.Popright} style={{width: show? '300px': '0px'}} >
+              <div className={Style.Popright} style={{width: show? '450px': '0px'}} onClick={this.handleClick}>
                   <div dangerouslySetInnerHTML={{__html: popData}} className={Style.content}>
 
                   </div>

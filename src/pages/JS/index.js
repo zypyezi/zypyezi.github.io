@@ -5,7 +5,8 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import PopRight from 'SRC/component/PopRight'
-import content from './Content/index'
+import {content} from 'SRC/document/JS/index'
+
   class JS extends Component{
        constructor (props) {
             super(props)
@@ -15,9 +16,22 @@ import content from './Content/index'
             }
        }
 
+       componentWillMount(){
+         let {match} = this.props
+         let {params} = match
+         let activeId = params.id
+         this.preId = activeId
+       }
+
 
        componentDidUpdate(){
          Prism.highlightAll()
+         let {match} = this.props
+        let {params} = match
+        let activeId = params.id
+        if(activeId != this.preId){
+         document.getElementById('scroll-container').scrollTop = 0
+        }
        }
 
        showPop = (e, show, html) => {
@@ -41,10 +55,9 @@ import content from './Content/index'
         let activeId = params.id
         let Com = content[activeId]
            return ( 
-              <div key={activeId} className={'pos-r h-100' } onClick={this.hidePop}>
-                  <Com showPop={this.showPop}></Com>
+            <div key={activeId} className={'pos-r' } onClick={this.hidePop} style={{paddingBottom: '100px'}} >
+                 {activeId && <Com showPop={this.showPop}></Com> }
                   <PopRight popData={this.state.popData} showPop={this.showPop} show={this.state.showPop}></PopRight>
-                  
               </div>
            )
         }

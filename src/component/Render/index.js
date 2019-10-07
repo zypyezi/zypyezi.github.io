@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 
 
-export default {
+const renderMethod =  {
     renderText: ({content}) => {
         return <div className={styles.block}>{content}</div>
     },
@@ -41,6 +41,12 @@ export default {
             <pre ><code className="language-javascript">{content}</code></pre>
         )
     },
+    renderHtml: ({content}) => {
+        return (
+            <div dangerouslySetInnerHTML={{__html: content}} > 
+            </div>
+            )
+    },
     renderPop: ({content, html}, props) => {
         return (
             <div className={styles.pop}> 
@@ -53,20 +59,21 @@ export default {
     }
 }
 
-// export const renderTitle = (content) => {
-//     return <h1>{content}</h1>
-// }
-
-// export const renderHead = (content) => {
-//     return <h1>{content}</h1>
-// }
 
 
-// export const renderP = (content) => {
-//     return <p>{content}</p>
-// }
-
-// export const renderSubLine = (content) => {
-//     return <span>{content}</span>
-// }
+export default (data, props) => {
+    return (
+        <div>
+            {
+                data.map(item => {
+                    if(item.type == 'renderPop'){
+                        return renderMethod[item.type](item, props)
+                    }else{
+                        return renderMethod[item.type](item)
+                    }
+                })
+            }
+        </div>
+    )
+}
 

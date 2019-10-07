@@ -2,9 +2,8 @@
 import React, { Component } from 'react'
 import { Route, HashRouter, Switch, Redirect, IndexRoute } from 'react-router-dom'
 import Home from '../pages/Home'
-import {summary} from '../constant'
 import Wrap from 'SRC/component/Wrap'
-
+import {summary} from './config'
 
 
 
@@ -16,7 +15,7 @@ const Routes = () => {
                 summary.map(item => {
                     return <Route 
                             key={item.id}
-                            path={item.path + '/:id?'} 
+                            path={item.path + '/:id'} 
                             render={
                                 () => <Wrap 
                                         title={item.title}

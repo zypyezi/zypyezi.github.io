@@ -1,0 +1,177 @@
+
+.transition-down{
+    animation: 1s  0s 1 ease-in slidein;
+}
+
+
+.title{
+    position: relative;
+    display: inline-block;
+    padding: 5px 30px;
+    color: #fff;
+    background: #222;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    font-size: 13px;
+    color: #999;
+    margin:0;
+}
+
+
+.title1{
+    border-left: 2px solid #999;
+    padding-left:10px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+    margin-left: 20px;
+}
+
+
+.calendar-box{
+    animation: topIn 1s ease;
+    // visibility: hidden;
+    // margin-top: 20px;
+}
+
+@keyframes topIn {
+    from { 
+      transform: translateY(-50px);
+      opacity: 0; 
+    }
+    to { 
+      transform: translateY(0px);
+      opacity: 1; 
+      visibility: visible;
+    }
+  }
+  
+.box{
+    width: 250px;
+    margin: 0 2% 2% 0;
+    list-style: none;
+    height: 150px;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin: 20px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #435a6b;
+    border-radius: 10px;
+   &:before{
+    content: "";
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+   }
+
+   span:first-child{
+        margin-top: 50px;
+        display: inline-block;
+        position: relative;
+   }
+
+
+
+   span:last-child{
+       color:rgba(0,0,0,0.4);
+       font-size: 16px;
+       z-index: 1;
+       display: block;
+       padding: 8px 0 0 0;
+       color: rgba(0,0,0,0.4);
+       text-shadow: none;
+       text-transform: none;
+       font-style: italic;
+       font-size: 0.75em;
+       font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       opacity: 0;
+       -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+       -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+       transition: transform 0.3s, opacity 0.3s;
+       -webkit-transform: translateY(-100%);
+       -moz-transform: translateY(-100%);
+       transform: translateY(-100%);
+   }
+
+
+
+   &:hover span:last-child{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+   }
+}
+
+
+
+.calendar{
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 65px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    /* padding-top: 30px; */
+    box-sizing: border-box;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+    span{
+        border: 1px solid #eee;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 65px;
+        background: #fff;
+        border-radius: 5px;
+        color: #2f4351;
+        animation: 1s 0s 1 showpage;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        transform-origin: 0 0;
+        pointer-events: none;
+        box-sizing: border-box;
+    }
+   
+}
+
+
+
+@keyframes slidein {
+    from { transform: translateY(-50%); }
+    to   { transform: 0; }
+}
+
+
+@keyframes showpage {
+    from {
+        -webkit-transform: rotateX(270deg);
+        -moz-transform: rotateX(270deg);
+        transform: rotateX(270deg);
+    }
+    to {
+        -webkit-transform: rotateX(0);
+        -moz-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+}

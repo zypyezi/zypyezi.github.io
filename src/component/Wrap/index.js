@@ -4,11 +4,11 @@ import SideBar from '../Sidebar'
 import styles from './index.scss'
 const Wrap = function ({Component, title, navData}) {
     return (
-        <div className="h-100">
-            {/* <PageHead title={title}></PageHead> */}
-            <div className="h-100">
+        <div className="h-100 oh">
+            <PageHead title={title}></PageHead>
+            <div className="h-100 ">
                 <SideBar navData={navData}></SideBar>
-                <div className={styles.container}>
+                <div className={styles.container} id="scroll-container">
                     <Component></Component>
                 </div>
                 
