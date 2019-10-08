@@ -26,7 +26,7 @@ const webpackConfig = {
                 //用于压缩和优化CSS 的处理器，默认是 cssnano
                 //这是一个函数，应该按照 cssnano.process 接口(接受一个CSS和options参数，返回一个Promise)
                 cssProcessorPluginOptions: {
-                  preset: ['default', { discardComments: { removeAll: true } }],
+                  preset: [ 'default', { discardComments: { removeAll: true } }],
                 },
                 canPrint: true  // 表示插件能够在console中打印信息
     

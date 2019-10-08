@@ -15,7 +15,7 @@ import Style from './index.scss'
        render () {
            let {popData, show} = this.props
            return ( 
-              <div className={Style.Popright} style={{width: show? '450px': '0px'}} onClick={this.handleClick}>
+              <div className={Style.popright} style={{width: show? '450px': '0px'}} onClick={this.handleClick}>
                   <div dangerouslySetInnerHTML={{__html: popData}} className={Style.content}>
 
                   </div>

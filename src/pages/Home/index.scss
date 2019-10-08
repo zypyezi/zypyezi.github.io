@@ -1,7 +1,32 @@
 
-.transition-down{
-    animation: 1s  0s 1 ease-in slidein;
-}
+    @keyframes topIn {
+        from { 
+          transform: translateY(-50px);
+          opacity: 0; 
+        }
+        to { 
+          transform: translateY(0px);
+          opacity: 1; 
+          visibility: visible;
+        }
+      }
+    
+
+    
+    
+    @keyframes showpage {
+        from {
+            // -webkit-transform: rotateX(270deg);
+            // -moz-transform: rotateX(270deg);
+            transform: rotateX(270deg);
+        }
+        to {
+            // -webkit-transform: rotateX(0);
+            // -moz-transform: rotateX(0);
+            transform: rotateX(0);
+        }
+    }
+    
 
 
 .title{
@@ -21,6 +46,7 @@
 }
 
 
+
 .title1{
     border-left: 2px solid #999;
     padding-left:10px;
@@ -31,23 +57,7 @@
 }
 
 
-.calendar-box{
-    animation: topIn 1s ease;
-    // visibility: hidden;
-    // margin-top: 20px;
-}
 
-@keyframes topIn {
-    from { 
-      transform: translateY(-50px);
-      opacity: 0; 
-    }
-    to { 
-      transform: translateY(0px);
-      opacity: 1; 
-      visibility: visible;
-    }
-  }
   
 .box{
     width: 250px;
@@ -145,7 +155,7 @@
         background: #fff;
         border-radius: 5px;
         color: #2f4351;
-        animation: 1s 0s 1 showpage;
+        animation:showpage 1s 0s 1 ;
         -webkit-transform-origin: 0 0;
         -moz-transform-origin: 0 0;
         transform-origin: 0 0;
@@ -158,20 +168,21 @@
 
 
 @keyframes slidein {
-    from { transform: translateY(-50%); }
-    to   { transform: 0; }
+    from { 
+        transform: translateY(-50%); 
+    }
+    to { 
+        transform: 0; 
+    }
+}
+
+.transition-down{
+    animation: slidein 1s  0s 1 ease-in ;
 }
 
 
-@keyframes showpage {
-    from {
-        -webkit-transform: rotateX(270deg);
-        -moz-transform: rotateX(270deg);
-        transform: rotateX(270deg);
-    }
-    to {
-        -webkit-transform: rotateX(0);
-        -moz-transform: rotateX(0);
-        transform: rotateX(0);
-    }
+.calendar-box{
+    animation: topIn 1s ease;
+    // visibility: hidden;
+    // margin-top: 20px;
 }
