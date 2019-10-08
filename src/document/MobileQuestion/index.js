@@ -29,15 +29,15 @@ export const MQData =  {
                 }
             ]
         },
-        // {
-        //     name: '兼容性',
-        //     submenus: [
-        //         {
-        //             name: '',
-        //             id: ''
-        //         }
-        //     ]
-        // },
+        {
+            name: '兼容性',
+            submenus: [
+                {
+                    name: '移动端遇到的兼容性问题',
+                    id: 'question1'
+                }
+            ]
+        },
         // {
         //     name: '其它',
         //     submenus: [
