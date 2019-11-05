@@ -65,6 +65,20 @@ const data = [
         type: 'renderTitle',
         content: 'instanceof 原理'
     },
+    {
+        type: 'renderHtml',
+        content: `
+        <text>根据原型链的__proto__ 属性逐级往上查找</text>
+        <codeBlock>
+        <code>var  L = A.__proto__</code>
+        <code>var  R =  B.prototype</code>
+        <code>if  ( L === R  ) {</code>
+            <code>return true</code>
+            <code>}</code>
+        
+        <codeBlock>
+        `
+    }
 ]
 
 export default data

@@ -1,10 +1,13 @@
 
+
+
+
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import PopRight from 'SRC/component/PopRight'
-import {content} from 'SRC/document/MobileQuestion/index'
+import {content} from 'SRC/document/Webpack/index'
 
-class MobileQuestion extends Component{
+class Webpack extends Component{
     constructor (props) {
         super(props)
         this.state = {
@@ -61,4 +64,4 @@ class MobileQuestion extends Component{
 
 }
 
-export default withRouter(MobileQuestion)
+export default withRouter(Webpack)

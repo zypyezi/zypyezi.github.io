@@ -9,9 +9,9 @@ const arr1 = [
     {
         type: 'renderUl',
         content: [
-            '基本类型 -  undefined 	 null		string 	number		boolean',
+            '基本类型 -  undefined 	 null	string 	number		boolean',
             '引用类型 -  object  传递的是引用地址',
-            'es6 新增类型 - symbol'
+            'es6 新增类型 - symbol  属于基本类型'
         ]
     },
     {

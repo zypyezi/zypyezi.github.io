@@ -1,34 +1,34 @@
 import renderMethod from "../../component/Render";
-import Css from 'SRC/pages/Css'
+import Product from 'SRC/pages/Product'
 import React, { Component } from 'react'
 
 
-export const CssData =  {
-    title:'css',
-    id:'css',
-    component:Css,
-    path: '/react',
-    subtitle: 'css 相关问题',
+export const ProductData =  {
+    title:'需求集合',
+    id:'product',
+    component:Product,
+    path: '/product',
+    subtitle: '相关需求总结',
     // default: '/rem',
     navData:[
         {
-            name: 'Css',
+            name: 'js',
             submenus: [
                 {
-                    name: '杂记',
-                    id: 'all'
+                    name: '将 pdf 文件转化为 图片',
+                    id: 'translatePdfToImg'
                 },
                 {
-                    name: 'BFC',
-                    id: 'bfc'
+                    name: '图片压缩',
+                    id: 'imageCompress'
                 },
                 {
-                    name: '盒模型',
-                    id: 'box'
+                    name: '搜索高亮',
+                    id: 'searchHighlight'
                 },
                 {
-                    name: 'flex',
-                    id: 'flex'
+                    name: '原生上传文件',
+                    id: 'uploadFile'
                 }
             ]
         },

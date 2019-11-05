@@ -8,7 +8,7 @@ const Data = [
     {
         type: 'renderHtml',
         content: `
-            <text>首先，需要了解JS是单线程的，JS通过事件循环的方式来实现异步回调</textv>
+            <text>首先，需要了解JS是单线程的，JS通过事件循环的方式来实现异步回调</text>
             <codeBlock>
                 <code>关于进程、线程</code>
                 <ul>

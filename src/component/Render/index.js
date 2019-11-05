@@ -7,6 +7,9 @@ const renderMethod =  {
     renderText: ({content}) => {
         return <div className={styles.block}>{content}</div>
     },
+    renderUrl: ({content = 'demo', url = ''}) => {
+        return <a href={url} target="_blank" className={styles.block}>{content}</a>
+    },
     renderTitle: ({content}) => {
         return <div className={styles.title}>{content}</div>
     },

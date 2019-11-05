@@ -9,7 +9,7 @@ export const ReactData =  {
     component:ReactCom,
     path: '/react',
     subtitle: 'React 相关问题',
-    // default: '/rem',
+    default: '/all',
     navData:[
         {
             name: 'react',
@@ -17,6 +17,10 @@ export const ReactData =  {
                 {
                     name: 'react-hook',
                     id: 'reacthook'
+                },
+                {
+                    name: '杂记',
+                    id: 'all'
                 }
             ]
         },

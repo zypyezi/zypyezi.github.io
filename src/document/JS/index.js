@@ -49,6 +49,14 @@ export const  jsData =   {
                     id: 'singleton'
                 },
                 {
+                    name: '缓存',
+                    id:'cache'
+                },
+                {
+                    name: 'jsonp',
+                    id:'jsonp'
+                },
+                {
                     name: 'xss攻击',
                     id: 'xss'
                 },
@@ -56,6 +64,31 @@ export const  jsData =   {
                     name: '杂记',
                     id: 'all'
                 }
+            ]
+        },
+        {
+            name: 'es6',
+            submenus: [
+                {
+                    name: 'var 和 let const',
+                    id: 'let'
+                },
+                {
+                    name: 'promise',
+                    id: 'promise'
+                },
+                {
+                    name: 'proxy',
+                    id: 'proxy'
+                },
+                {
+                    name: 'class',
+                    id: 'class'
+                },
+                {
+                    name: 'module',
+                    id: 'module'
+                },
             ]
         },
         {
