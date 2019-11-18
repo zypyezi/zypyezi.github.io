@@ -66,7 +66,7 @@ const calendar = [getCurTime()]
              })
            }
            this.timmer = setInterval(getCurTime, 1000)
-        
+
        }
 
 
@@ -80,7 +80,7 @@ const calendar = [getCurTime()]
 
        renderCalendar = () => {
             let {calendar} = this.state
-            let prev = calendar[0] 
+            let prev = calendar[0]
             let after = calendar[1]
             if(!prev || !after){
                 return null
@@ -131,10 +131,7 @@ const calendar = [getCurTime()]
                             )
                         })
                     }
-                    
-                    <div className={styles.box}>
-                        <span>Canvas</span>
-                    </div>
+
                 </div>
             </div>
         }
@@ -145,13 +142,13 @@ const calendar = [getCurTime()]
            return <div className="pos-r ta-l oh mt-60">
                <div className={styles.title1}>Works</div>
                <div className="ml-20">
-                
+
                </div>
            </div>
        }
 
        render () {
-           return ( 
+           return (
               <div  className="ta-c">
                   {this.renderTitle()}
                   {this.renderCalendar()}
