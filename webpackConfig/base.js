@@ -1,7 +1,7 @@
 const path = require('path')
 var webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const CopyPlugin = require('copy-webpack-plugin')
 
 
 const ENV = process.env.ENV
@@ -86,7 +86,14 @@ const webpackConfig = {
 
         new webpack.DefinePlugin({
              "process.env.NODE_ENV": JSON.stringify(ENV)
-        })
+        }),
+
+        new CopyPlugin([
+            {
+              from: path.join(__dirname, '../src/statics/images'),
+              to: path.resolve(__dirname, '../doc/statics')
+            }
+          ])
     ]
 }
 

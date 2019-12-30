@@ -10,6 +10,7 @@
   "author": "zyp",
   "license": "ISC",
   "dependencies": {
+    "copy-webpack-plugin": "^5.1.1",
     "flowchart": "^1.2.0",
     "jquery": "^3.4.1",
     "jsplumb": "^2.11.2",

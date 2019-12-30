@@ -19,7 +19,16 @@ export const webpackData =  {
                     id: 'summary1'
                 }
             ]
-        }
+        },
+        {
+            name: '使用过的Plugin',
+            submenus: [
+                {
+                    name: 'plugin',
+                    id: 'Plugin'
+                }
+            ]
+        },
     ]
 }
 
