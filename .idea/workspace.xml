@@ -58,11 +58,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="1" />
           <entry key="js" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1" />
         </counts>
       </usages-collector>
@@ -92,8 +94,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code-template1/assets/js/2.222e522a.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/code-template/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -256,29 +262,6 @@
             <path>
               <item name="zypyezi.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="zypyezi.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zypyezi.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zypyezi.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zypyezi.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zypyezi.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="document" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zypyezi.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zypyezi.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="route" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zypyezi.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zypyezi.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="webpackConfig" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -330,15 +313,16 @@
       <workItem from="1573520864010" duration="2234000" />
       <workItem from="1573608166964" duration="1108000" />
       <workItem from="1573638294046" duration="17000" />
-      <workItem from="1588938655356" duration="118000" />
+      <workItem from="1588938655356" duration="584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19412000" />
+    <option name="totallyTimeSpent" value="19878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25633803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -602,6 +586,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code-template1/assets/js/2.222e522a.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/document/Css/Content/css3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -609,8 +596,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code-template1/assets/js/2.222e522a.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/code-template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
