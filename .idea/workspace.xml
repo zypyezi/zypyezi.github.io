@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7736ac24-6f20-46f7-bfc2-ad0531da4b09" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/push.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +54,10 @@
     <session id="1245000023">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -243,7 +245,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="49" />
     <option name="y" value="23" />
     <option name="width" value="1391" />
@@ -270,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,6 +283,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,12 +329,13 @@
       <workItem from="1573520864010" duration="2234000" />
       <workItem from="1573608166964" duration="1108000" />
       <workItem from="1573638294046" duration="17000" />
-      <workItem from="1588938655356" duration="816000" />
+      <workItem from="1588938655356" duration="969000" />
+      <workItem from="1588986637634" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20110000" />
+    <option name="totallyTimeSpent" value="20266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -351,7 +354,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29950494" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29826733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -545,6 +548,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code-template1/assets/js/2.222e522a.js" />
     <entry file="file://$PROJECT_DIR$/src/document/Css/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -552,6 +556,20 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/document/Css/Content/css3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -596,23 +614,6 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-template1/assets/js/2.222e522a.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/document/Css/Content/css3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
